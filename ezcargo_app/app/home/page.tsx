@@ -1,15 +1,16 @@
 import Head from 'next/head';
 import "../home/home.css"
 import Image from 'next/image';
-
+import { handleSubmit } from './formHandler'; // Adjust the import path as needed
 export default function Home() {
   return (
     <>
 
       <main>
         <header className="header">
-          
-            <Image src="/AmericanLogo.png" alt="EZCargo Logo" width={120} height={30} className='logo'/>
+
+          <Image src="/AmericanLogo.png" alt="EZCargo Logo" width={120} height={30}
+            className='logo' />
 
           <div className="container">
             <h1>EZCargo Logistics</h1>
@@ -18,7 +19,7 @@ export default function Home() {
               <a href="#contact">Contact</a>
             </nav>
           </div>
-          
+
         </header>
 
         <section className="hero">
@@ -51,11 +52,12 @@ export default function Home() {
 
         <section className="contact" id="contact">
           <h2>Contact Us</h2>
-          <form>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-            <input type="tel" placeholder="Phone" required />
-            <textarea placeholder="Comments"></textarea>
+          <form
+             onSubmit={handleSubmit}>
+            <input name="name" type="text" placeholder="Name" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <input name="phone" type="tel" placeholder="Phone" required />
+            <textarea name="comments" placeholder="Comments"></textarea>
             <button type="submit">Request Your Free Quote</button>
           </form>
         </section>
@@ -63,7 +65,19 @@ export default function Home() {
         <footer>
           <div className="container">
             <p>&copy; {new Date().getFullYear()} EZCargo Logistics</p>
-            <p>Contact: 385-567-6354 | ezcargologistics@hotmail.com</p>
+            <p>Contact: 385-567-6354 | ezcargologistics@hotmail.com </p>
+            <a
+              href='https://www.instagram.com/ezcargo_logistics/'>
+              <Image
+                aria-hidden
+                src="/instagram.svg"
+                alt="File icon"
+                width={16}
+                height={16}
+              />
+              <span> @ezcargo_logistics </span>
+            </a>
+
           </div>
         </footer>
       </main>

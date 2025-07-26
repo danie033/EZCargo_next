@@ -1,0 +1,51 @@
+html, body{
+    background-color: white;}
+
+
+.container {
+    min-height: 200px;
+    background-color: red;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    border: 2px solid black; 
+    justify-content: center; /*horizontal alignment */
+    align-items: flex-end; /*vertical alignment */
+    /*flex-direction: column;*/ /*uncomment to stack items vertically */
+}
+
+#block1 {
+    background-color: blue;
+    margin: 20px 10px 20px 10px;
+    padding: 0px;
+    box-shadow: 5 5px 6px white;
+    border-radius: 6px;
+    border: 2px solid black;
+    height: 100px;
+    width: 200px;
+    display: flex; /*very essential to make location flexible */
+    justify-content: center;
+    align-items: center
+;    
+}
+#block1:hover {
+    box-shadow: 5 5px 6px black;
+    text-decoration: underline;
+    
+}
+
+#block2 {
+    background-color: green;
+    margin: 20px 10px 20px 10px;
+    padding: 0px;
+}
+
+#block3 {
+    background-color:black;
+    margin: 20px 10px 20px 10px;
+    padding: 0px;
+}
+
+
+
+
